@@ -45,7 +45,7 @@ func main() {
 		fmt.Printf("Dado recebido de APICEP: %s", msg)
 	case msg := <-viacepCh:
 		fmt.Printf("Dado recebido de VIACEP: %s", msg)
-	case <-time.After(time.Second * 3):
+	case <-time.After(time.Second * 1):
 		print("Nenhuma das APIS respondeu dentro de 3 segundos.")
 	}
 }
